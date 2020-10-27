@@ -66,7 +66,7 @@ ADD ./src/common/xfce/ $HOME/
 RUN $INST_SCRIPTS/libnss_wrapper.sh
 ADD ./src/common/scripts $STARTUPDIR
 RUN $INST_SCRIPTS/set_user_permission.sh $STARTUPDIR $HOME
-
+RUN chmod +x /headless/Desktop/*.sh
 USER 0
 
 ENTRYPOINT ["/dockerstartup/vnc_startup.sh"]

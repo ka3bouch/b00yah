@@ -75,7 +75,7 @@ fi
        else
             c=0$i;
        fi
-      #n=1
+       #n=1
        if [ "$i" -ge "$b" ];
        then
               n=2;
@@ -84,16 +84,16 @@ fi
        fi
        git clone https://z0la$n@bitbucket.org/z0la$n/$c.git
        echo -e "${RED}git@bitbucket.org:z0la$n/$c.git"
-      # echo -e "\e[49m"
+       # echo -e "\e[49m"
        PIP_BITBUCKET_YML=$REPO_DIR$c/bitbucket-pipelines.yml
        #printf "I ${RED}love${NC} Stack Overflow\n"
        cd $REPO_DIR$c
        #pwd
        ch_id=$(cat $PIP_BITBUCKET_YML|grep "boo" |cut  -f5 -d '/')
        mot_time=$(cat $PIP_BITBUCKET_YML|grep "time")
-#mot_time=$(cat $PIP_BITBUCKET_YML|grep "time" |cut  -f2 -d ':')
+       #mot_time=$(cat $PIP_BITBUCKET_YML|grep "time" |cut  -f2 -d ':')
        echo $mot_time
-       printf "chanel stream id  ${RED}#$parr#${NC} Stack Overflow\n"
+       printf "chanel stream id  ${RED}#$ch_id#${NC} Stack Overflow\n"
 
 
        sed -i "s/: 5/: 65/g" $REPO_DIR$c/bitbucket-pipelines.yml
